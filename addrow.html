@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addrow()
+        {
+            var name = document.getElementById("txtname").value;
+            var contact = document.getElementById("txtcontact").value;
+            if(name =="" || contact =="")
+            {
+                document.getElementById("hvalid").innerHTML="please fill all the fields";
+            }
+            else
+            {
+             
+            var tbl = document.getElementById("tbldata");
+            var row = tbl.insertRow();
+            var cell1 = row.insertCell(0)
+            var cell2 = row.insertCell(1)
+            cell1.innerHTML = name
+            cell2.innerHTML = contact
+            }
+        }
+        function empty()
+        {
+            document.getElementById("hvalid").innerHTML="";
+        }
+    </script>
+</head>
+<body>    
+    <p>enter name : <input type="text" id="txtname" onfocus="empty()"></p>
+    <p>enter contact : <input type="text" id="txtcontact" onfocus="empty()"></p>
+    <h1 id="hvalid" style="color:red;"></h1>
+    <input type="button" value="Add row" onclick="addrow()">
+    <table id="tbldata">
+        <tr><th>Name </th>
+        <th>Contact</th></tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showtable(x)
+        {
+var ptable = document.getElementById("ptable");
+ptable.innerHTML="";
+var n = parseInt(document.getElementById("txt1").value)
+            if(x==1)
+            {
+                for(i=1;i<=10;i++)
+                {
+                    ptable.innerHTML+= (i*n) +"<br>"
+                }
+            }
+            else
+            {
+                for(i=10;i>=1;i--)
+                {
+                    ptable.innerHTML+= (i*n) +"<br>"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <p>Enter any no :
+        <input type="text" id="txt1">
+    </p>
+    <input type="button" value="Show table " onclick="showtable(1)">
+    <input type="button" value="Show Reverse table " onclick="showtable(2)">
+    <p id="ptable"></p>
+</body>
+</html>

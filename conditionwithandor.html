@@ -1,0 +1,45 @@
+<!-- condtion 1 and condition 2 // both are true
+
+condition 1 or condition 2 // any one is true  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findhighest()
+        {
+            var a,b,c;
+            var result = document.getElementById("result");
+            a = parseInt(document.getElementById("txta").value);
+            b = parseInt(document.getElementById("txtb").value)
+            c= parseInt(document.getElementById("txtc").value);
+            if(a>b && a>c)
+            {
+                result.innerHTML="A is highest no ";
+            }
+            else
+            {
+                if(b>c)
+                {
+                    result.innerHTML="b is highest no ";
+                }
+                else
+                {
+                    result.innerHTML = "c is highest no ";
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p>a: <input type="text" id="txta"></p>
+    <p>b: <input type="text" id="txtb"></p>
+    <p>c: <input type="text" id="txtc"></p>
+    <input type="button" value="check highest " onclick="findhighest()">
+    <h1 id="result"></h1>
+</body>
+</html>

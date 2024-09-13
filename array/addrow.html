@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function adddata()
+        {
+            var tbldata = document.getElementById("tbldata");
+            var tblrow = tbldata.insertRow(2)
+            var tblcell1 = tblrow.insertCell(0)
+            var tblcell2 = tblrow.insertCell(1)
+            tblcell1.innerHTML = document.getElementById("txtname").value;
+            tblcell2.innerHTML = document.getElementById("txtsalary").value;
+        }
+
+
+        function arraytask()
+        {
+            var users =["Ram","Raman","Vinesh"]
+            var usersSurname = [];
+            
+            document.getElementById("users").innerHTML=""
+        for( var i =0;i<users.length;i++)
+        {
+            usersSurname.push((users[i]+" Sharma"))
+            document.getElementById("users").innerHTML+= usersSurname[i];
+        }
+        }
+    </script>
+</head>
+<body>
+    <p>name : <input type="text" id="txtname"></p>
+    <p>salary : <input type="text" id="txtsalary"></p>
+    <input type="button" value="add" onclick="adddata()">
+    <input type="button" value="Users" onclick="arraytask()">
+    <table id="tbldata">
+    </table>
+    <div id="users"></div>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function numbers()
+        {
+            var hresult = document.getElementById("hresult");
+            hresult.innerHTML="";
+            var i = 0;
+            do
+            {
+                hresult.innerHTML += i+" ";
+                i++;
+            }
+            while(i>=1 && i<=10)
+            // while(i<5)
+            // {
+            //     hresult.innerHTML += i+ " ";
+            //     i++;
+            // }
+        }
+        function checkprime()
+        {
+            var n = parseInt(document.getElementById("txt1").value);
+            var i = 2;
+            while(i<n)
+            {
+                if(n%i==0)
+                {
+                    break;
+                }
+                i++;
+            }
+            if(i==n)
+            {
+                document.getElementById("hresult").innerHTML=n+  " is a prime no ";
+            }
+            else
+            {
+                document.getElementById("hresult").innerHTML=n+  " is not a prime no ";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click here " onclick="numbers();">
+    <p>enter any no <input type="text" id="txt1"></p>
+    <input type="button" value="click here " onclick="checkprime();">
+    <h1 id="hresult"></h1>
+    
+</body>
+</html>

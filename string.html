@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function stringFunctions(x)
+        {
+            var str = document.getElementById("txt1").value;
+            var sentence = document.getElementById("txtSentence").value;
+            var newstr = document.getElementById("txt2").value;
+            var heading = document.getElementById("hresult");
+            switch(x)
+            {
+
+                case 1: 
+                var l =str.length;
+                heading.innerHTML = l ;
+                break;
+
+                case 2:
+                var index = sentence.indexOf(str);
+                heading.innerHTML = index ;
+                break;
+
+                case 3 : 
+                sentence = sentence.replaceAll(str,newstr)
+                heading.innerHTML = sentence;
+                break;
+
+                
+            }
+        }
+        function chkpassword()
+        {
+            var p1 = document.getElementById("pwd1").value
+            var p2 = document.getElementById("pwd2").value
+            var msg = document.getElementById("msg")
+            if(p1==p2)
+            {
+                msg.innerHTML = "password  match" 
+            }
+            else
+            {
+                msg.innerHTML = "password not match";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Enter Sentance : <textarea id="txtSentence"></textarea></p>
+    <p>enter city name : <input type="text" id="txt1"></p>
+    <p>Enter new city name : <input type="text" id="txt2"></p>
+    <input type="button" value="show length" onclick="stringFunctions(1)" >
+    <input type="button" value="find" onclick="stringFunctions(2)" >
+    <input type="button" value="REplace" onclick="stringFunctions(3)" >
+    <h1 id="hresult"></h1>
+    
+    <div>
+        <p>enter pwd : <input type="text" id = "pwd1"> </p>
+        <p>reenter pwd : <input type="text" id = "pwd2"> </p>
+        <input type="button" value="check" onclick="chkpassword();">
+        <h2 id="msg"></h2>
+    </div>
+</body>
+</html>

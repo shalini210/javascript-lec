@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var emps = [];
+        function addemp()
+        {
+            var namebox = document.getElementById("txtname");
+            var salarybox = document.getElementById("txtsalary");
+            var divt = document.getElementById("data")
+            var n = namebox.value;
+            var s = parseInt(salarybox.value)
+            var emp = {name:n,salary:s}
+            emps.push(emp)
+            empty();
+            console.log(emps);
+
+            divt.innerHTML="<table>";
+             for(var i =0 ;i<emps.length;i++)
+             {
+                    divt.innerHTML+= "<tr><td>"+emps[i].name+" </td><td> "+emps[i].salary+"</td></tr>"                    
+                }
+                divt.innerHTML+= "</table>"
+        }
+        function empty()
+        {
+            var namebox = document.getElementById("txtname");
+            var salarybox = document.getElementById("txtsalary");
+            namebox.value="";
+            salarybox.value="";
+        }
+    </script>
+</head>
+<body>
+    <p>name : <input type="text" id="txtname"></p>
+    <p>salary : <input type="text" id="txtsalary"></p>
+    <input type="button" value="Add" onclick="addemp()">
+    <div id="data">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showNumbers()
+        {
+            var dnumbers = document.getElementById("dnumbers");
+            var sp = "";
+            for(i=1;i<=20;i++)
+            {
+                if(i%2==0)
+                {
+                    sp  = "<span style='background-color:green'>"+i+"</span>";
+                }
+                else
+                {
+                    sp  = "<span style='background-color:red'>"+i+"</span>";
+                }
+                dnumbers.innerHTML+= sp +"<br>";
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="button" value="show numbers" onclick="showNumbers();">
+    <div id="dnumbers">
+
+    </div>
+</body>
+</html>

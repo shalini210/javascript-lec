@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showbill()
+        {
+            var quantity = document.getElementById("quantity").value;           
+           
+           var itemname = document.getElementById("itemname").value;
+           var storename = "Dmart";
+           if(document.getElementById("r1").checked)
+           {
+            storename="smartbazaar";
+           }
+
+            if(itemname=="Apple")
+            {
+                bill = 250*quantity;              
+            }
+            else
+            {
+                bill = 50*quantity;
+              
+            }
+            var finalbill=0;
+            if(storename=="Dmart")
+            {
+                finalbill = bill-( bill*0.1)
+            }
+            else
+            {
+                finalbill=bill-(bill*(5/100))
+            }
+            msg = 
+            "bill of "+ quantity +" kg of "+ itemname +" from "+storename +" is "+bill+"<br>"+
+            "after discount : "+ finalbill;
+document.getElementById("hbill").innerHTML=msg;
+        }
+    </script>
+</head>
+<body>
+    <h2>Choose store : </h2>
+    <input type="radio" value="smartbazaar" id="r1" name="xyz"> <label for="r1">Smart Bazaar</label>
+    <input type="radio" value="Dmart" id="r2" name="xyz"><label for="r2">Dmart</label>
+
+
+
+    <p>select product : <select id="itemname">
+        <option>Apple</option>
+        <option>Papaya</option>
+    </select></p>
+    <p>select quantity : 
+        <select  id="quantity">
+            <option value="1">1kg </option>
+            <option value="2">2kg </option>
+        </select>
+    </p>
+    <input type="button" value="Show bill " onclick="showbill()">
+    <h2 id="hbill">
+
+    </h2>
+</body>
+</html>

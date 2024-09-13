@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box
+    {
+      height:300px;
+      width:25%;
+      background-color: aquamarine;
+      position: fixed;
+    }
+    .titleI
+    {
+      animation:zoomin 1s 1;
+      font-size:35px;
+      color:blue;
+      margin-left:5%
+    }
+    .titleO
+    {
+      font-size: 25px;
+      color:black;
+      margin-left:-55%;
+    }
+    .smallcircle
+    {
+      height:50px;width:50px;
+      background-color: blueviolet;
+    }
+    .bigcircle
+    {
+     
+      animation: zoomin 2s infinite;
+    }
+    @keyframes zoomin {
+      from{transform: scale(0);}
+      to{transform:scaleX(3)}
+    }
+  </style>
+  <script>
+ function   Zoom(x)
+    {
+      var circle = document.getElementById("circle");
+      var pcontent = document.getElementById("content");
+      if(x==1)
+      {
+        //zoom in section 
+        circle.className ="smallcircle"
+      }
+      else
+      {
+        circle.className ="bigcircle"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="box" onmouseover="Zoom(1)" onmouseout="Zoom(2)">
+    <div id="circle" class="smallcircle"></div>
+    <div>Lorem ipsum,
+       dolor sit amet 
+      consectetur adipisicing elit. Debitis quas 
+      asperiores quod corporis obcaecati, ut fugiat. Amet rem quisquam vel deserunt illo soluta corrupti perspiciatis fuga optio? Nesciunt, facilis molestias?</div>
+  </div>
+</body>
+</html>

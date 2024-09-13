@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            gap:5px;
+        }
+        .ball
+        {
+            height:75px;
+            width:75px;
+            background-color: red;
+            border-radius: 50%;
+            animation: animateball 5s infinite ;
+        }
+        .d1
+        {
+            animation-delay: 1s;
+        }
+        .d2
+        {
+            animation-delay: 2s;
+        }
+        .d3
+        {
+            animation-delay: 3s;
+        }
+        
+        @keyframes animateball {
+            0%{margin-left:0px ;margin-top:0px;}
+            50%{margin-left:250px ;margin-top:250px;}
+            0%{margin-left:0px ;margin-top:0px;}            
+        }
+    </style>
+    <script>
+        function hidethis(x)
+        {
+            x.style.display="none"
+        }
+    </script>
+</head>
+<body>
+    <div class="ball d1" onclick="hidethis(this)"></div>
+    <div class="ball d2" onclick="hidethis(this)"></div>
+    <div class="ball d3" onclick="hidethis(this)"></div>
+    <div class="ball" onclick="hidethis(this)"></div>
+    <div class="ball d3" onclick="hidethis(this)"></div>
+
+    <div class="ball d1" onclick="hidethis(this)"></div>
+    <div class="ball" onclick="hidethis(this)"></div>
+
+    <div class="ball d2" onclick="hidethis(this)"></div>
+    <div class="ball d3" onclick="hidethis(this)"></div>
+</body>
+</html>

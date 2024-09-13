@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showBonus()
+        {
+            var salary = document.getElementById("txt1").value;
+            salary =parseFloat(salary)
+            var bonus =0;
+            salary>=20000?bonus=salary*5/100:  bonus=salary*0.1
+            document.getElementById("hbonus").innerHTML = bonus
+        }
+    </script>
+</head>
+<body>
+    <p>Enter salary : <input type="text" id="txt1"></p>
+    <input type="button" value="show bonus" onclick="showBonus()"/>
+    <p id="hbonus"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chk()
+        {
+            var heading = document.getElementById("hresult");
+            age = parseInt(document.getElementById("txtage").value);
+            if(age>17)
+            {
+              if(age>120)
+              {
+                heading.innerHTML="invalid age";
+                heading.style.backgroundColor="orange";
+              }
+              else
+              {
+                heading.innerHTML="Eligible to vote";
+                heading.style.backgroundColor="yellowgreen";
+              }
+            }
+            else
+            {
+                if(age<0)
+                {
+                heading.innerHTML="invalid age";
+                heading.style.backgroundColor="orange";
+              }
+              else
+              {
+                heading.innerHTML="not eligible to vote";
+                heading.style.backgroundColor="orange";
+              }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Enter age: <input type="text" id="txtage"></p>
+    <input type="button" value="check" onclick="chk()">
+    <h2 id="hresult"></h2>
+</body>
+</html>

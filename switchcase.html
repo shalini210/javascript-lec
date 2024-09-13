@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkvowel()
+        {
+            x= (document.getElementById("txt1").value);
+            var p = document.getElementById("presult");
+            x = x.toLowerCase()
+            switch(x)
+            {
+                case 'a':
+                p.innerHTML = "Vowel"
+                break;
+                case 'e':
+                p.innerHTML = "Vowel"
+                break;
+                case 'i':
+                p.innerHTML = "Vowel"
+                break;
+                case 'o':
+                p.innerHTML = "Vowel"
+                break;
+                case 'u':
+                p.innerHTML = "Vowel"
+                break;
+                default:
+                    p.innerHTML="consonent"
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        enter no : <input type="text" id="txt1" maxlength="1">
+    </p>
+    <input type="button" value="click here " onclick="checkvowel()">
+    <p id="presult"></p>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>                   
+        var marks = [45,25,87,54,65,21];      
+        function findinarray()
+        {
+            var pass =marks.filter((e)=>e>34);
+            console.log(marks)
+            console.log(pass)
+        } 
+        function usingmap()
+        {
+            var po = document.getElementById("poriginal");
+            var pm = document.getElementById("paftermap")                     
+            var newmarks = marks.map((e)=>
+            {                
+                return e+(e*5/100);
+            })          
+            po.innerHTML =""
+            pm.innerHTML =""
+            for(var i=0 ;i<=4;i++)
+            {
+                po.innerHTML+= marks[i]+ " "
+                pm.innerHTML+= newmarks[i]+ " "
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="using map " onclick="usingmap()">
+    <input type="button" value="find" onclick="findinarray()">
+    <p id="poriginal"></p>
+    <p id="paftermap"></p>
+</body>
+</html>

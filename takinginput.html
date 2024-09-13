@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hi()
+        {
+            var c=document.getElementById("txt1").value;
+            document.getElementById("hresult").innerHTML="welcome "+c;
+          
+        }
+    </script>
+</head>
+<body>
+    <p>Enter name :
+        <input type="text" id="txt1">
+    </p>
+    <input type="button" value="Click here " onclick="hi()">
+    <h1 id="hresult"></h1>
+</body>
+</html>

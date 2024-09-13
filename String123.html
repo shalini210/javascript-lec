@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function stringwork(x)
+        {
+            var username = document.getElementById("txtname").value;
+            var houtput = document.getElementById("houtput");
+            houtput.innerHTML = "your name " + username; 
+                var sentence = document.getElementById("txt1").value;
+            switch(x)
+            {
+                case 1:                   
+                    len = username.length;
+                    houtput.innerHTML = "your name has "+ len +" no of characters";
+                break;
+                case 2:
+                
+                    newname = username.slice(0,4);
+                    houtput.innerHTML = newname;
+                    break
+
+                case 3:
+                
+               var i = sentence.indexOf(username);
+               if(i>=0)
+               {
+                houtput.innerHTML = "Name is found at index " + i;
+               }
+               else
+               {
+                houtput.innerHTML = "Name is not present in string";
+               }
+                break
+                case 4:
+                    sentence= sentence.replaceAll("hello","hi")
+                    houtput.innerHTML= sentence;
+                break;
+                default:
+                    houtput.innerHTML = "in default";
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Enter any sentence : <textarea id="txt1"></textarea></p>
+    <p>Enter Name : <input type="text" id="txtname"></p>
+    <p>replace with : <input type="text"></p>
+    <input type="button" value="length" onclick="stringwork(1)">
+    <input type="button" value="slice" onclick="stringwork(2)">
+    <input type="button" value="index of " onclick="stringwork(3)">
+    <input type="button" value="replace" onclick="stringwork(4)">
+    <h1 id="houtput"></h1>
+</body>
+</html>

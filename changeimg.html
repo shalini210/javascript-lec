@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeimg()
+        {
+            var img  = document.getElementById("img1");
+            console.log(img.src)
+            if(img.src=="http://127.0.0.1:5500/images/1.jpg")
+            {
+                img.src = "http://127.0.0.1:5500/images/2.jpg"
+            }
+            else
+            {
+                img.src = "http://127.0.0.1:5500/images/1.jpg"
+            }
+        }
+        function demo(x)
+        {
+x.style.display="none"
+            console.log(x)
+        }
+    </script>
+</head>
+<body>
+    <img src="images/1.jpg" id="img1" onclick="changeimg()">
+
+    <input type="button" value="hello " onclick="demo(this)">
+
+    <input type="text"  onclick="demo(this)">
+
+    <select onclick="demo(this)">
+        <option>INdore</option>
+    <option>Ujjain </option></select>
+</body>
+</html>

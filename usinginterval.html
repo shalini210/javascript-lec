@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function timerstart()
+        {
+        var t = document.getElementById("timer");
+           var c = 5;  
+           
+           
+           let timer= setInterval(()=>           
+           {
+            if(c>0)
+            {
+            t.innerHTML=c;
+            c--;
+            }
+            else
+            {
+                clearInterval(timer);
+                t.innerHTML="time up"
+            }
+           },1000)
+
+       
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="click here " onclick="timerstart()">
+    <p id="timer">5</p>
+</body>
+</html>

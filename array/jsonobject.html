@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var users=[];
+        function Adduser()
+        {
+            var username = document.getElementById("txtname").value;
+            var usercontact = document.getElementById("txtcontact").value;
+            var usercity = document.getElementById("txtcity").value;
+            var user = {name:username,contact:usercontact,city:usercity}
+            users.push(user)
+            showUsers();         
+        }
+        function showUsers()
+        {
+            let div = document.getElementById("data");
+            div.innerHTML="";
+            for(var i = 0 ;i<users.length;i++)
+            {
+   div.innerHTML+= "<p> name : "+users[i].name +" contact :"
+                  +users[i].contact+" City : "+ users[i].city;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>name : <input type="text" id="txtname"></p>
+    <p>contact : <input type="text" id="txtcontact"></p>
+    <p>city: <input type="text" id="txtcity"></p>
+
+    <input type="button" value="show" onclick="Adduser()">
+    <div id="data">
+
+    </div>
+</body>
+</html>
